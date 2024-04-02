@@ -1,0 +1,100 @@
+/* Déclaration @font-face pour la police Maven Pro */
+@font-face {
+    font-family: 'MavenPro';
+    src: url(/assets/fonts/MavenPro-Regular.ttf),
+        url(/assets/fonts/MavenPro-Bold.ttf);
+}
+
+/* Déclaration @font-face pour la police Lato */
+@font-face {
+    font-family: 'Lato';
+    src: url(/assets/fonts/Lato-Regular.ttf),
+        url(/assets/fonts/Lato-Bold.ttf);
+}
+
+/**************** Généralités ***************/
+
+/* Police Lato pour le texte */
+body {
+    font-family: "Lato", sans-serif;
+    min-width: 375px;
+    max-width: 1440px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Variables de couleurs */
+:root {
+    --couleur-header: #323232;
+    --couleur-footer: #323232;
+    --couleur-principale: #2eb398;
+}
+
+/* Police Maven Pro pour les titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "MavenPro", sans-serif;
+}
+
+/* Supprime les styles de liste par défaut */
+li {
+    list-style: none;
+}
+
+/* Supprime les styles de lien par défaut */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Taille de police par défaut pour les paragraphes */
+p {
+    font-size: 1rem;
+    color: white;
+}
+
+/**************** Header ***************/
+
+.header {
+    background-color: var(--couleur-header);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 1.25rem;
+}
+
+.navigation {
+    display: flex;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.navigation ul {
+    display: flex;
+}
+
+.ul-navigation {
+    padding-right: 50px;
+}
+.navigation li {
+    color: white;
+}
+
+.navigation a {
+    padding-left: 50px;
+}
+
+.navigation a:hover {
+    color: var(--couleur-principale);
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    transform: rotate(90deg);
+}
