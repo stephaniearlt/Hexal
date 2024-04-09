@@ -11,3 +11,5 @@ Spécificités techniques :
 - Langages de programmation : HTML et CSS
 
 La maquette est intégrée en desktop first.
+
+Source pour télécharger le template : https://www.psdchat.com/resources/templates/psd-templates/hexal/

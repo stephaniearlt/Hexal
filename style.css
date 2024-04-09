@@ -57,6 +57,11 @@ p {
     color: white;
 }
 
+h2 {
+    color: white;
+    font-size: 2.5rem;
+}
+
 /**************** Header ***************/
 
 .header {
@@ -109,6 +114,7 @@ p {
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 100px;
+    margin-bottom: 175px;
 }
 
 .ligne {
@@ -122,7 +128,8 @@ p {
     height: 300px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     margin: 13px;
-    margin-bottom: -75px; /* Supprimer la marge inférieure */
+    margin-bottom: -75px;
+    /* Supprimer la marge inférieure */
 }
 
 .polygon img {
@@ -133,3 +140,66 @@ p {
     height: 100%;
     object-fit: cover;
 }
+
+/* About */
+
+.about {
+    display: flex;
+    justify-content: center;
+    background-color: var(--couleur-principale);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.polygon-about {
+    position: relative;
+    width: 255px;
+    height: 300px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.polygon-about img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.description {
+    flex: 0 0 58.5%;
+    /* Réduit la largeur de la partie description à 58.5% de l'espace disponible */
+    display: flex;
+    justify-content: space-between;
+    /* Aligne les éléments sur les extrémités (à gauche et à droite) */
+    align-items: flex-start;
+    /* Aligne les éléments sur le haut */
+}
+
+.content {
+    flex: 1;
+    /* Prend tout l'espace disponible */
+    padding-left: 25px;
+}
+
+.title-description {
+    padding-bottom: 10px;
+}
+
+.subtitle-description {
+    color: #19947a;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}
+
+.txt-description {
+  line-height: 1.8;
+  /* Hauteur de ligne */
+}
+
+/* .icon1::after {
+    font-family: "Font Awesome 5 Brands";
+    content: "\f09a";
+Ajouter autres propriétés CSS style icône : taille, couleur, etc. */
