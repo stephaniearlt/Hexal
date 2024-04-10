@@ -18,6 +18,7 @@
 body {
     font-family: "Lato", sans-serif;
     min-width: 375px;
+    width: 1020px;
     max-width: 1440px;
     margin: 0 auto;
     box-sizing: border-box;
@@ -25,9 +26,9 @@ body {
 
 /* Variables de couleurs */
 :root {
-    --couleur-header: #323232;
-    --couleur-footer: #323232;
     --couleur-principale: #2eb398;
+    --couleur-secondaire: #323232;
+    --couleur-footer: #222222;
 }
 
 /* Police Maven Pro pour les titres */
@@ -65,11 +66,11 @@ h2 {
 /**************** Header ***************/
 
 .header {
-    background-color: var(--couleur-header);
+    background-color: var(--couleur-secondaire);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 20px 0;
     font-size: 1.25rem;
 }
 
@@ -84,7 +85,7 @@ h2 {
 }
 
 .ul-navigation {
-    padding-right: 50px;
+    padding-right: 22px;
 }
 
 .navigation li {
@@ -113,8 +114,8 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 100px;
-    margin-bottom: 175px;
+    margin-top: 75px;
+    margin-bottom: 125px;
 }
 
 .ligne {
@@ -124,12 +125,11 @@ h2 {
 
 .polygon {
     position: relative;
-    width: 255px;
-    height: 300px;
+    width: 180px;
+    height: 207px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    margin: 13px;
-    margin-bottom: -75px;
-    /* Supprimer la marge inférieure */
+    margin: 10px;
+    margin-bottom: -50px;
 }
 
 .polygon img {
@@ -153,8 +153,8 @@ h2 {
 
 .polygon-about {
     position: relative;
-    width: 255px;
-    height: 300px;
+    width: 180px;
+    height: 207px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
@@ -195,11 +195,46 @@ h2 {
 }
 
 .txt-description {
-  line-height: 1.8;
-  /* Hauteur de ligne */
+    line-height: 1.8;
+    /* Hauteur de ligne */
 }
 
 /* .icon1::after {
     font-family: "Font Awesome 5 Brands";
     content: "\f09a";
 Ajouter autres propriétés CSS style icône : taille, couleur, etc. */
+
+/* Contact */
+
+.contact {
+    background-color: var(--couleur-secondaire);
+    display: flex;
+    justify-content: center;
+    padding-top: 45px;
+    padding-bottom: 50px;
+    padding-left: 170px;
+}
+
+.contact-form {
+    flex: 0 0 80%;
+    /* Réduit la largeur de la partie description à 58.5% de l'espace disponible */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    /* Les éléments du formulaire sont empilés verticalement */
+}
+
+/* Style pour les étiquettes et les champs de saisie du formulaire */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.info {
+    flex: 1;
+    /* Prend tout l'espace disponible */
+    padding-right: 171px;
+}
