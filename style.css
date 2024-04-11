@@ -216,6 +216,7 @@ Ajouter autres propriétés CSS style icône : taille, couleur, etc. */
 .title-contact {
     padding-bottom: 5px;
 }
+
 .subtitle-contact {
     font-size: 1.2rem;
     padding-bottom: 5px;
@@ -284,4 +285,24 @@ textarea {
 
 span {
     font-weight: bold;
+}
+
+/**************** Footer ***************/
+
+.footer {
+    background-color: var(--couleur-footer);
+    padding: 20px 50px;
+}
+
+.footer p {
+    color: #454545;
+    font-size: 0.8rem;
+}
+
+.footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: var(--couleur-principale);
 }
