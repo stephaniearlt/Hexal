@@ -70,8 +70,23 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px 0;
+    padding: 20px 0 0;
     font-size: 1.25rem;
+    position: relative;
+}
+
+/* Séparateur en forme de triangle */
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 43px 43px 0 43px;
+    border-color: var(--couleur-secondaire) transparent transparent transparent;
 }
 
 .navigation {
@@ -112,15 +127,30 @@ h2 {
 
 .hexagon {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     margin-top: 75px;
-    margin-bottom: 125px;
+    margin-bottom: 30px;
+    position: relative;
 }
 
-.ligne {
-    display: flex;
-    justify-content: space-between;
+/* Bordure décoration */
+.hexagon::before,
+.hexagon::after {
+    content: "";
+    position: absolute;
+    left: 2%;
+    width: 96%;
+    height: 0.5px;
+    background-color: rgb(219, 211, 211);
+}
+
+.hexagon::before {
+    top: -55px;
+}
+
+.hexagon::after {
+    bottom: -10px;
 }
 
 .polygon {
@@ -129,7 +159,6 @@ h2 {
     height: 207px;
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     margin: 10px;
-    margin-bottom: -50px;
 }
 
 .polygon img {
@@ -141,6 +170,100 @@ h2 {
     object-fit: cover;
 }
 
+.ligne1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -60px;
+    position: relative;
+}
+
+/* Bordure décoration */
+.ligne1::before,
+.ligne1::after {
+    content: "";
+    position: absolute;
+    height: 46%;
+    top: 27%;
+    width: 0.5px;
+    background-color: rgb(219, 211, 211);
+}
+
+.ligne1::before {
+    left: 100px;
+}
+
+.ligne1::after {
+    right: 100px;
+}
+
+.ligne2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -60px;
+}
+
+.ligne3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Bordure décoration */
+.ligne3::before,
+.ligne3::after {
+    content: "";
+    position: absolute;
+    height: 46%;
+    top: 27%;
+    width: 0.5px;
+    background-color: rgb(219, 211, 211);
+}
+
+.ligne3::before {
+    left: 100px;
+}
+
+.ligne3::after {
+    right: 100px;
+}
+
+/* Bordure décoration */
+.ligne1::before,
+.ligne1::after {
+    content: "";
+    position: absolute;
+    height: 46%;
+    top: 27%;
+    width: 0.5px;
+    background-color: rgb(219, 211, 211);
+}
+
+.ligne1::before {
+    left: 100px;
+}
+
+.ligne1::after {
+    right: 100px;
+}
+
+.square {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+.fa-regular.fa-square {
+    background-color: rgb(219, 211, 211);
+    color: rgb(219, 211, 211);
+    font-size: 0.5rem;
+    margin-right: 2px;
+}
+
 /* About */
 
 .about {
@@ -149,6 +272,26 @@ h2 {
     background-color: var(--couleur-principale);
     padding-top: 75px;
     padding-bottom: 75px;
+    position: relative;
+}
+
+/* Bordure décoration */
+.about::before,
+.about::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    width: 0.5px;
+    height: 90%;
+    background-color: #7d7a7a;
+}
+
+.about::before {
+    left: 100px;
+}
+
+.about::after {
+    right: 100px;
 }
 
 .polygon-about {
@@ -169,17 +312,14 @@ h2 {
 
 .description {
     flex: 0 0 59%;
-    /* Réduit la largeur de la partie description à 58.5% de l'espace disponible */
     display: flex;
     justify-content: space-between;
-    /* Aligne les éléments sur les extrémités (à gauche et à droite) */
     align-items: flex-start;
-    /* Aligne les éléments sur le haut */
+    flex-direction: column;
 }
 
 .content {
     flex: 1;
-    /* Prend tout l'espace disponible */
     padding-left: 25px;
 }
 
@@ -192,14 +332,47 @@ h2 {
 
 .txt-description {
     line-height: 1.3;
-    /* Hauteur de ligne */
     text-align: justify;
 }
 
-/* .icon1::after {
-    font-family: "Font Awesome 5 Brands";
-    content: "\f09a";
-Ajouter autres propriétés CSS style icône : taille, couleur, etc. */
+.social-icons {
+    display: flex;
+    margin-left: auto;
+    color: var(--couleur-principale);
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
+}
+
+.icon1 {
+    background-color: #9fded6;
+}
+
+.icon2 {
+    background-color: #6ccebc;
+}
+
+.icon3 {
+    background-color: #55bdad;
+}
+
+.icon4 {
+    background-color: #9fded6;
+}
+
+.icon5 {
+    background-color: #6ccebc;
+}
+
+.icon6 {
+    background-color: #55bdad;
+}
 
 /* Contact */
 
@@ -211,6 +384,29 @@ Ajouter autres propriétés CSS style icône : taille, couleur, etc. */
     grid-template-columns: 2fr 1fr;
     padding: 75px 117px;
     grid-gap: 40px;
+    position: relative;
+}
+
+/* Bordure décoration */
+.contact::before,
+.contact::after {
+    content: "";
+    position: absolute;
+    /* Left + width pour décalage symétrique */
+    /* Se déplace horizontalement par rapport à son parent */
+    left: 2%;
+    /* Largeur totale par rapport à son parent */
+    width: 96%;
+    height: 0.5px;
+    background-color: var(--couleur-footer);
+}
+
+.contact::before {
+    top: 15px;
+}
+
+.contact::after {
+    bottom: 15px;
 }
 
 .title-contact {
@@ -285,6 +481,12 @@ textarea {
 
 span {
     font-weight: bold;
+}
+
+.icon {
+    color: var(--couleur-principale);
+    padding-right: 15px;
+    font-size: 0.85rem;
 }
 
 /**************** Footer ***************/
